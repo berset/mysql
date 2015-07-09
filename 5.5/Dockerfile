@@ -48,6 +48,7 @@ RUN mkdir -p /etc/mysql/conf.d \
         echo 'user = mysql'; \
         echo 'datadir = /var/lib/mysql'; \
         echo 'max_connections = 1024'; \
+        echo 'max_connect_errors = 10000'; \
     } > /etc/mysql/conf.d/docker.cnf
 
 COPY docker-entrypoint.sh /entrypoint.sh
